@@ -17,7 +17,7 @@ app.secret_key = "super-secret-key"
 CORS(app, supports_credentials=True)
 
 client = MongoClient(
-    "mongodb+srv://admin:shubhamsaini11@zerotrust.dgubcw7.mongodb.net/zerotrust?retryWrites=true&w=majority&appName=zerotrust"
+    ""
 )
 
 db = client["zerotrust"]
@@ -855,3 +855,4 @@ def admin_audit_logs():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
