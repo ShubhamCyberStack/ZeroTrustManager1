@@ -4,12 +4,12 @@ import pyotp
 import secrets
 
 # Use your actual MongoDB connection string here:
-client = MongoClient("mongodb+srv://admin:shubhamsaini11@zerotrust.dgubcw7.mongodb.net/zerotrust?retryWrites=true&w=majority&appName=zerotrust")
+client = MongoClient("")
 db = client["zerotrust"]
 users_col = db["users"]
 
 username = "admin"
-password = "AdminStrongPassword123!"
+password = "AdminStrongPassword098!"
 
 hashed_pw = bcrypt.hashpw(password.encode(), bcrypt.gensalt())
 mfa_secret = pyotp.random_base32()
@@ -40,3 +40,4 @@ else:
     print("\n🔒 IMPORTANT: Save these credentials securely!")
 
 client.close()
+
